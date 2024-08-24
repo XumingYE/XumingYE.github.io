@@ -11,7 +11,7 @@ I'm a third year graduate student from [Minzu University of China (985, 211 proj
 
 I am very fortunate to be advised by [Prof. Weng](https://gjaqyjy.muc.edu.cn/info/1052/1171.htm) from [School of Computer Science](https://cs.pku.edu.cn/). I was advised by [Prof. Tian](https://tianwenlong001.github.io/wenlongtian/) from [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
 
-You can find my CV here: [CV](../files/cv.pdf).
+You can find my CV here: [CV](../files/cv-申博简历.pdf).
 
 [Email](xumingye@muc.edu.cn) / [Github](https://github.com/XumingYE) / [Wechat](../images/wc.jpg)
 
@@ -51,17 +51,30 @@ International Conference on Web Services (ICWS). (**CCF-B**)
 
 Wang J, Tian W, Li R, **Ye X**, et al. Sym-Fed: Unleashing the Power of Symmetric Encryption in Cross-Silo Federated Learning[C]//2023 IEEE 22nd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom). IEEE, 2023: 833-840. (**CCF-C**)
 
+上下文语义嵌入的变粒度云存储相似数据去重技术 // 计算机技术与发展, 2024 **（参与，CCF-C）**
+
 Geng, Y., Tian, W., Li, R., Xiao, W., Ouyang, C., Liu, Y., **Ye, X**, et al. ZContext-aware Resemblance Detection based Deduplication Ratio Prediction for Cloud Storage[C]//2022 IEEE/ACM International Conference on Big Data Computing, Applications and Technologies (BDCAT). IEEE, 2022: 21-29.
 
 Li, B., Tian, W., Li, R., Xiao, W., Fu, Z., **Ye, X**, et al. Cross-domain Resemblance Detection based on Meta-learning for Cloud Storage[C]//2022 IEEE International Performance, Computing, and Communications Conference (IPCCC). IEEE, 2022: 374-379. (**CCF-C**)
 
-**Ye X**, Xue X, Tian W, et al. Chunk content is not enough: Chunk-context aware resemblance detection for deduplication delta compression[C]// 2022 Data Compression Conference (DCC). IEEE, 2022: 492-492. (**CCF-B**)
+**Ye X**, Xue X, Tian W, et al. Chunk content is not enough: Chunk-context aware resemblance detection for deduplication delta compression[C]// 2022 Data Compression Conference (DCC). IEEE, 2022: 492-492. (**CCF-B，本科阶段完成**)
 
-**Ye X**, Tang J, Tian W, et al. Fast variable-grained resemblance data deduplication for cloud storage[C]//2021 IEEE International Conference on Networking, Architecture and Storage (NAS). IEEE, 2021: 1-8.
+**Ye X**, Tang J, Tian W, et al. Fast variable-grained resemblance data deduplication for cloud storage[C]//2021 IEEE International Conference on Networking, Architecture and Storage (NAS). IEEE, 2021: 1-8. (**EI，本科阶段完成**)
+
 
 Journal Papers
 ======
-(第一作者，SCI-二区，大修) Context-Aware Resemblance Detection for Data Deduplication with Neural Network
+(速速接收)
+
+Manuscripts Under Review
+======
+**（第一作者，SCI Q1，大修， 本科阶段完成）** Context-Aware Resemblance Detection for Data Deduplication with Neural Network
+
+**（参与，JCR Q1，大修）** IBNR-RD: Intra-Block Neighborhood Relationship-Based Resemblance Detection for High-Performance Multi-Node Post-Deduplication // IEEE Transactions on Cloud Computing
+
+**（参与，CCF-B，在审）** Redbench: AIGC-based Benchmark Suite for Resemblance Detection with Backdoor Attack Capability // ACM SIGMETRICS, 2025
+
+**（参与，SCI Q1，在审）** Sym-CS-HDFL: Enhancing Privacy and Efficiency in Heterogeneous Federated Learning through Symmetric Homomorphic Encryption and Adaptive Aggregation // IEEE Transactions on Neural Networks and Learning Systems
 
 <!-- **Markdown generator**
 
