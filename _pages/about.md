@@ -68,7 +68,7 @@ Journal Papers
 
 Manuscripts Under Review
 ======
-**（第一作者，SCI Q1，大修， 本科阶段完成）** Context-Aware Resemblance Detection for Data Deduplication with Neural Network
+**（第一作者，JCR Q1，小修， 本科阶段完成）** Context-Aware Resemblance Detection for Data Deduplication with Neural Network
 
 **（参与，JCR Q1，大修）** IBNR-RD: Intra-Block Neighborhood Relationship-Based Resemblance Detection for High-Performance Multi-Node Post-Deduplication // IEEE Transactions on Cloud Computing
 
