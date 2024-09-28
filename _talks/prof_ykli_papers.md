@@ -64,3 +64,28 @@ The main idea is to split cold large pages with high repetition rate to save mem
 
 
 **主要难点：**how to efficiently monitor repetition rate and access frequency of pages, and how to dynamically conduct conversions between large pages and base pages so as to achieve both high deduplication rate and high memory access performance.
+
+
+Serverless
+===
+在使用Serverless架构进行数据处理时，尤其是在涉及到“shuffle”操作的情况下，数据传输的问题。在这种场景中，每个函数的输出需要传递给下一个 stage 的所有函数，这导致了大量的数据传输请求。下面是对这个情况的详细解释：
+
+1. 函数的并行性与数据传递
+在 Serverless 架构中，每个 stage 可以包含多个并行执行的函数。在你的例子中，一个 stage 有 500 个函数。这种架构的一个关键特点是它的无状态性，即每个函数执行时不会保留之前状态的任何信息，因此所有必要的数据都需要通过网络从其他地方获取。
+
+2. Shuffle 操作的数据传输需求
+在数据处理的 shuffle 阶段，每个函数的输出不仅仅是传递给下一个 stage 的一个函数，而是要传递给下一个 stage 的所有函数。这种类型的数据传递是全连接的（all-to-all connectivity），即每个函数的输出都需要被下一个 stage 的每个函数获取。
+
+3. 计算 PUT 和 GET 请求次数
+PUT 请求次数：如果 stage A 有 500 个函数，每个函数都需要将其输出结果存储起来供其他函数访问。因为每个函数的输出需要被下一个 stage 的所有 500 个函数访问，所以每个输出都要被 PUT 到一个可以被这些函数访问的地方（比如 S3）。因此，每个函数都执行了 500 次 PUT 操作（每次 PUT 操作对应一个接收者函数），总共是 500 × 500 = 250,000 次 PUT。
+GET 请求次数：同理，每个函数都需要获取其他所有 499 个函数（假设自己的输出不需要自己再次获取）的输出，也就会执行 500 次 GET 请求，总共也是 500 × 500 = 250,000 次 GET。
+4. 对 Serverless 平台的影响
+由于每个函数都依赖于远程对象存储（如 S3）来传递数据，因此大量的 PUT 和 GET 请求可能会导致达到这些服务的请求率上限。当请求量超过 S3 允许的限制时，会导致延迟增加，从而影响整个数据处理过程的效率和响应时间。
+
+总结
+在这种高并行度和全连接数据传输需求的场景中，数据传输请求（PUT 和 GET）的数量会非常巨大，这可能会超过远程数据存储服务的处理能力，从而成为系统性能的瓶颈。这也突出了在设计 Serverless 数据处理架构时，需要考虑如何优化数据传输和存储访问模式的重要性。
+
+Shuffle 操作的目的
+在数据处理和分布式计算中，shuffle 操作的主要目的是重新分配数据，使得数据可以根据某些特定的键（如分组键、排序键等）跨多个处理节点进行重新组合。这通常是为了执行某些需要广泛数据交换的操作，如汇总、排序或连接不同数据集。
+
+Shuffle 是连接不同计算阶段（stages）的桥梁，确保数据按照处理逻辑被正确分配到下一个阶段的每个函数或任务。
