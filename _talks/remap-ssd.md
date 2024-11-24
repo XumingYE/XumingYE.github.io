@@ -286,6 +286,13 @@ int main() {
 
 ```
 
+5. PebbleSSD 也提出了基于 NVRAM 的框架，但是原文中说OOB的大小是固定的，所以只适合P类型。那么Remap-SSD也没能解决这个问题吧？
+6. 为什么不能使用 dedicated log （这个才是log-structure storage吧）的形式去持久化P2L呢？
+这个其实很好解释，log-structure storage需要combing等，日志比较大
+7. 为什么说基于NVRAM存储RMM的形式也是 log-structure storage？不应该是write-ahead logging （WAL）吗？因为此处的log并不是真正的数据，而是产生的日志文件，用来恢复P2L，并保证原子性的
+8. 为什么RMM不能存储在DRAM中，主要原因不是因为断电恢复吗？为什么原文中会和cache扯上关系呢？他的目的本身就是持久化
+9. RMM的 invalidate 的逻辑没有详细说明，以及 Segment 的回收也没有说明，感觉这两个点比较关键
+
 # 设计部分
 ![](https://cdn.nlark.com/yuque/0/2024/png/26280077/1732370075208-1b5d0508-2437-4532-80ff-7ae1854f2b22.png)
 
