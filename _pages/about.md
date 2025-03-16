@@ -64,17 +64,16 @@ Li, B., Tian, W., Li, R., Xiao, W., Fu, Z., **Ye, X**, et al. Cross-domain Resem
 
 Journal Papers
 ======
-(速速接收)
+
+**（第一作者，JCR Q1， EAAI）** Context-Aware Resemblance Detection for Data Deduplication with Neural Network
+
+**（参与，JCR Q1，TCC）** IBNR-RD: Intra-Block Neighborhood Relationship-Based Resemblance Detection for High-Performance Multi-Node Post-Deduplication // IEEE Transactions on Cloud Computing
 
 Manuscripts Under Review
 ======
-**（第一作者，JCR Q1，小修， 本科阶段完成）** Context-Aware Resemblance Detection for Data Deduplication with Neural Network
 
-**（参与，JCR Q1，大修）** IBNR-RD: Intra-Block Neighborhood Relationship-Based Resemblance Detection for High-Performance Multi-Node Post-Deduplication // IEEE Transactions on Cloud Computing
-
-**（参与，CCF-B，在审）** Redbench: AIGC-based Benchmark Suite for Resemblance Detection with Backdoor Attack Capability // ACM SIGMETRICS, 2025
-
-**（参与，SCI Q1，在审）** Sym-CS-HDFL: Enhancing Privacy and Efficiency in Heterogeneous Federated Learning through Symmetric Homomorphic Encryption and Adaptive Aggregation // IEEE Transactions on Neural Networks and Learning Systems
+**（参与，CCF-B，在审）** BytePattern, ICDCS 2025
+**（参与，SCI Q1，在审）** DICE, ToS
 
 <!-- **Markdown generator**
 
